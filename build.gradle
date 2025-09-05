@@ -27,11 +27,14 @@ allprojects {
         mavenCentral()
         maven { url "https://jitpack.io" }
         //maven { url 'https://download.01.org/crosswalk/releases/crosswalk/android/maven2' }
-//        maven { url 'http://9xi4o.tk/maven2' }
         maven { 
             url 'http://home.jundie.top:81/xwalk/maven2'
             allowInsecureProtocol = true
         }
+        // 添加阿里云镜像仓库
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
     }
 }
 
