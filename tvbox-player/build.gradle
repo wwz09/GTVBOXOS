@@ -1,0 +1,22 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 26
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+}
+
+dependencies {
+    implementation project(':tvbox-core')
+    implementation 'xyz.doikki:dkplayer-java:3.3.5'
+    implementation 'xyz.doikki:dkplayer-ui:3.3.5'
+}
