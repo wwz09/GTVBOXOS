@@ -21,7 +21,7 @@ repositories {
 }
 
 dependencies {
-    implementation project(':tvbox-core')
+    implementation project(':tvbox-interface')
     implementation 'com.google.android.exoplayer:exoplayer:2.18.7'
     implementation 'com.google.android.exoplayer:extension-rtmp:2.18.7'
 }
