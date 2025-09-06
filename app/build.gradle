@@ -68,10 +68,13 @@ dependencies {
 
     implementation 'org.nanohttpd:nanohttpd:2.3.1'
     implementation 'com.google.zxing:core:3.3.0'
-    implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
-    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'  // 更新到最新稳定版
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'  // 更新到最新稳定版
+    // lifecycle-extensions已弃用，使用具体组件替代
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.6.1'
+    implementation 'androidx.recyclerview:recyclerview:1.3.1'  // 更新到最新稳定版
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.8.22'  // 添加Kotlin支持
     implementation files('libs/thunder.jar')
     implementation files('libs/commons-lang3-3.12.0.jar')
 
@@ -81,10 +84,14 @@ dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.squareup.okio:okio:2.8.0'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.45-androidx'
-    implementation 'com.kingja.loadsir:loadsir:1.3.8'
+    implementation 'com.kingja.loadsir:loadsir:1.8.6' // 更新到最新稳定版
     implementation 'com.google.code.gson:gson:2.8.7'
     implementation 'com.squareup.picasso:picasso:2.71828'
-    implementation 'me.jessyan:autosize:1.2.1'
+    implementation 'me.jessyan:autosize:1.2.1' {
+        exclude group: 'com.android.support'
+    }
+    // 或者使用最新版
+    // implementation 'com.github.JessYanCoding:AndroidAutoSize:v1.2.1'
     implementation('com.thoughtworks.xstream:xstream:1.4.15') {
         exclude group: 'xmlpull', module: 'xmlpull'
     }
@@ -95,16 +102,15 @@ dependencies {
     // implementation project(":player")
     // implementation project(":quickjs")
 
-    implementation('org.xwalk:xwalk_shared_library:23.53.589.4') {
+    // 使用标准WebView实现
+    implementation 'androidx.webkit:webkit:1.4.0'
+    implementation 'com.lzy.net:okgo:3.0.4' {
         exclude group: 'com.android.support'
     }
-    implementation 'com.lzy.net:okgo:3.0.4'
-    // implementation 'com.tencent.bugly:crashreport_upgrade:latest.release'
     implementation 'com.owen:tv-recyclerview:3.0.0'
-
-    implementation 'com.github.getActivity:XXPermissions:13.6'
-    implementation 'org.jsoup:jsoup:1.14.1'
+    implementation 'com.github.getActivity:XXPermissions:16.8'  // 更新到最新稳定版
+    implementation 'org.jsoup:jsoup:1.15.4'  // 更新到最新稳定版
     implementation 'com.github.hedzr:android-file-chooser:v1.2.0-final'
-    implementation 'commons-io:commons-io:2.11.0'
-    implementation 'com.googlecode.juniversalchardet:juniversalchardet:1.0.3'
+    implementation 'commons-io:commons-io:2.13.0'  // 更新到最新稳定版
+    implementation 'com.googlecode.juniversalchardet:juniversalchardet:2.4.0'  // 更新到最新稳定版
 }
